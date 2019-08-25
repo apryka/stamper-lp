@@ -1,0 +1,40 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+
+  &__text {
+    font-size: 1.25rem;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+    display: inline-flex;
+  }
+
+  &__element {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.25rem;
+    line-height: 1.15;
+    border-right: 1px solid $color_white;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__label {
+    color: $color_blue;
+    font-size: 1.125rem;
+  }
+
+  &__btn {
+    margin-top: 4.25rem;
+  }
+}

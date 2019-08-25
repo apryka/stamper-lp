@@ -1,0 +1,19 @@
+.video-player {
+  width: 820px;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/Video.png);
+  background-image: -webkit-image-set(url(../images/Video.png) 1x, url(../images/Video@2x.png) 2x);
+  background-image: image-set(url(../images/Video.png) 1x, url(../images/Video@2x.png) 2x);
+
+  &__btn {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,42 @@
+.slider {
+  min-height: 854px;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    left: -5%;
+    bottom: -10px;
+    transform: rotate(2deg);
+    width: 110%;
+  }
+
+  &__wrapper {
+    margin-top: auto;
+    margin-bottom: 5rem;
+  }
+
+  .slide {
+    position: relative;
+
+    &__image {
+      position: absolute;
+      right: 0;
+      bottom: -5rem;
+    }
+
+    &__content {
+      width: 50%;
+    }
+
+    &__text {
+      color: $color_light_blue;
+    }
+  }
+
+  .text--primary {
+    width: 50%;
+  }
+}
