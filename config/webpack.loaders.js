@@ -9,7 +9,7 @@ const html = {
   test: /\.(html)$/,
   use: [
     {
-      loader: 'html-loader',
+      loader: 'html-loader-srcset',
       options: {
         interpolate: true,
       },

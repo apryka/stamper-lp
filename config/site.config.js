@@ -15,7 +15,7 @@ const config = {
   site_description: 'landing page',
 
   // Your website's URL, used for sitemap
-  site_url: '',
+  site_url: 'http://stamper.com',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
