@@ -111,6 +111,7 @@ const imageLoader = {
     mozjpeg: {
       progressive: true,
     },
+    svgo: null,
   },
 };
 

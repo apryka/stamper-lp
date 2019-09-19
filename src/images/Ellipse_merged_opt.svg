@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="svg4562" width="198" height="198">
+  <defs id="defs4556">
+    <style id="style4543">
+      .a{fill:#fff}.b{filter:url(#a)}
+    </style>
+    <filter id="a" width="198" height="198" x="0" y="0" filterUnits="userSpaceOnUse">
+      <feOffset id="feOffset4545" dy="6"/>
+      <feGaussianBlur id="feGaussianBlur4547" result="b" stdDeviation="8"/>
+      <feFlood id="feFlood4549" flood-color="#24263f" flood-opacity=".129"/>
+      <feComposite id="feComposite4551" in2="b" operator="in" result="result1"/>
+      <feComposite id="feComposite4553" in="SourceGraphic" in2="result1"/>
+    </filter>
+  </defs>
+  <g id="g4560" class="b">
+    <path id="path4558" d="M76 1A75 75 0 1 1 1 76 75 75 0 0 1 76 1z" class="a" transform="translate(23 17)"/>
+  </g>
+  <path id="path4584" d="M60.233 91.528a39 39 0 1 1 39 39 39.045 39.045 0 0 1-39-39zm3 0a36 36 0 1 0 36-36 36.041 36.041 0 0 0-36 36zM93.796 104.7l-15-12a1.5 1.5 0 0 1 1.874-2.343l13.888 11.111 23.053-25.939a1.503 1.503 0 0 1 2.244 2l-24 27a1.5 1.5 0 0 1-2.059.175z" style="fill:#0060ff"/>
+</svg>
