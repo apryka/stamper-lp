@@ -162,17 +162,36 @@ strong {
 .footer {
   margin-top: 11.5rem;
 
-  &__link {
-    font-size: 0.75rem;
-    font-family: $font_secondary;
-    font-weight: 700;
-    color: $color_light_blue;
-    text-decoration: none;
-    transition: color 250ms ease-out;
-    will-change: color;
+  &__nav {
+    .nav__list {
+      list-style: decimal;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
 
-    &:hover {
+      &__item {
+        margin-right: 1.25rem;
+        color: $color_white;
+        transition: color 250ms ease-out;
+        will-change: color;
+
+        &:hover {
+          color: $color_light_blue;
+        }
+      }
+    }
+
+    .nav__link {
+      font-family: $font_secondary;
       color: $color_white;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 250ms ease-out;
+      will-change: color;
+
+      &:hover {
+        color: $color_light_blue;
+      }
     }
   }
 }
