@@ -47,11 +47,55 @@ function handleClickOnFaq() {
   });
 }
 
+function renderModal(status) {
+  const modalContent = `
+  <div class="modal__box">
+    <h1 class="modal__header">Dziękujemy za zamówienie!</h1>
+    <p class="modal__text">Formularz został wysłany poprawnie!</p>
+    <div class="modal__close"></div>
+  </div>
+  `;
+  const modal = document.createElement('div');
+  modal.classList.add('modal__cover');
+  modal.innerHTML = modalContent;
+
+  if (status) {
+    document.body.append(modal);
+  } else {
+    document.querySelector('.modal__cover').remove();
+  }
+}
+
+function handleFormSubmit() {
+  const form = document.querySelector('.form');
+  const submitBtn = form.querySelector('[type="submit"]');
+
+  submitBtn.addEventListener('click', () => {
+    form.classList.add('dirty');
+  });
+
+  form.addEventListener('submit', (e) => {
+    renderModal(true);
+    document.querySelector('.modal__close').addEventListener('click', () => renderModal(false));
+
+    if (!window.localStorage) return;
+    if (window.localStorage.getItem('form_submitted') === 'true') {
+      e.preventDefault();
+    } else {
+      window.localStorage.setItem('form_submitted', true);
+      submitBtn.disabled = true;
+    }
+  });
+}
+
 window.addEventListener('load', () => {
-  const time = 'Aug 31, 2019 23:00:00';
+  const time = 'Aug 31, 2019 23:00:00'; // set time for counter
+
   countdownToTime(time);
 
   handleClickOnFaq();
+
+  handleFormSubmit();
 
   // eslint-disable-next-line
   const customSwiper = new Swiper('.slider', {
