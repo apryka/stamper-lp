@@ -23,6 +23,31 @@
               </li>
             </ul>
           </nav>
+          <div class="navigation navigation--mobile">
+            <div class="navigation__menu">
+              <a href="" class="logo">
+                <img src="../src/images/logo.svg" alt="logo" class="logo__icon">
+              </a>
+              <div class="navigation__icon">
+                <div class="navigation__hamburger">
+                </div>
+              </div>
+            </div>
+            <div class="navigation__container">
+              <nav class="navigation__nav">
+                <a href="" class="logo">
+                  <img src="../src/images/logo.svg" alt="logo" class="logo__icon">
+                </a>
+                <ul class="navigation__list">
+                  <li class="navigation__item"><a class="navigation__link" href="#jak-to-dziala">Jak to działa?</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#korzysci">Zalety</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#korzysci">Jak zacząć?</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#korzysci">Zamów</a></li>
+                </ul>
+              </nav>
+              <a href="#rejestracja" class="btn btn--shadow btn--small">Rejestracja</a>
+            </div>
+          </div>
           <section class="section section-main">
             <div class="section__info">
               <h1 class="section__title h1 header--underline">
@@ -76,7 +101,7 @@
                 <div class="slide swiper-slide">
                   <div class="slide__content">
                     <h3 class="h3 slide__title header--underline"><b>Remarketing</b></h3>
-                    <p class="slide__text">Targetujemy odbiorcę ponownie i kierujemy komunikaty mające na celu ciągły dialog i utr zymanie więzi z użytkownikiem. Przypominamy o Twoim miejscu, brakujących pieczątkach do otrzymania nagrody czy zachęcamy do ponownego odwiedzenia.</p>
+                    <p class="slide__text">Targetujemy odbiorcę ponownie i kierujemy komunikaty mające na celu ciągły dialog i utrzymanie więzi z użytkownikiem. Przypominamy o Twoim miejscu, brakujących pieczątkach do otrzymania nagrody czy zachęcamy do ponownego odwiedzenia.</p>
                   </div>
                   <img src="images/mockup_powiadomiania_w_tel.png"
                     alt="remarketing"
@@ -85,8 +110,8 @@
                 </div>
                 <div class="slide swiper-slide">
                   <div class="slide__content">
-                    <h3 class="h3 slide__title header--underline"><b>Remarketing</b></h3>
-                    <p class="slide__text">Targetujemy odbiorcę ponownie i kierujemy komunikaty mające na celu ciągły dialog i utr zymanie więzi z użytkownikiem. Przypominamy o Twoim miejscu, brakujących pieczątkach do otrzymania nagrody czy zachęcamy do ponownego odwiedzenia.</p>
+                    <h3 class="h3 slide__title header--underline"><b>Bliskość</b></h3>
+                    <p class="slide__text">Stamper aktywnie używa geofencingu w celu zwiększenia liczby klientów odwiedzających i powracających do danego miejsca. Powiadamia użytkowników o bliskości Twojej marki i możliwych korzyści z programu lojalnościowego, gdy użytkownik znajdzie się w obrębie założonej przez nas lokalizacji.</p>
                   </div>
                   <img src="images/mockup_powiadomiania_w_tel.png"
                     alt="remarketing"
@@ -95,8 +120,8 @@
                 </div>
                 <div class="slide swiper-slide">
                   <div class="slide__content">
-                    <h3 class="h3 slide__title header--underline"><b>Remarketing</b></h3>
-                    <p class="slide__text">Targetujemy odbiorcę ponownie i kierujemy komunikaty mające na celu ciągły dialog i utr zymanie więzi z użytkownikiem. Przypominamy o Twoim miejscu, brakujących pieczątkach do otrzymania nagrody czy zachęcamy do ponownego odwiedzenia.</p>
+                    <h3 class="h3 slide__title header--underline"><b>Segmentacja</b></h3>
+                    <p class="slide__text">Monitorujemy zwyczaje zakupowe klientów, wiemy co najczęściej kupują, w jakich godzinach i w jakiej lokalizacji. Pozwala to na dostosowanie powiadomień o promocjach - wysyłamy powiadomienia o nowych dostępnych usługach czy restauracjach z podobnego segmentu, które odpowiadają profilowi użytkownika.</p>
                   </div>
                   <img src="images/mockup_powiadomiania_w_tel.png"
                     alt="remarketing"
@@ -122,19 +147,34 @@
           <h3 class="h3 section__title header--light">Zalety</h3>
           <ul class="section__list">
             <li class="section__list__item">
-              <img src="images/Ellipse_merged_opt.svg" alt="icon" class="section__list__icon">
+              <!-- <img src="images/Ellipse_merged_opt.svg" alt="icon" class="section__list__icon"> -->
+              <picture class="section__list__icon">
+                <source media="(max-width: 1023px)" srcset="images/Combined_shape_1067.svg">
+                <source media="(min-width: 1024px)" srcset="images/Ellipse_merged_opt.svg">
+                <img src="images/Combined_shape_1067.svg" alt="icon" class="section__list__icon">
+              </picture>
               <p class="section__list__text">
                 Prosty, zrozumiały, nieskomplikowany i jednolity system dla wszystkich - zbieranie pieczątek
               </p>
             </li>
             <li class="section__list__item">
-              <img src="images/Ellipse_merged_opt.svg" alt="icon" class="section__list__icon">
+              <!-- <img src="images/Ellipse_merged_opt.svg" alt="icon" class="section__list__icon"> -->
+              <picture class="section__list__icon">
+                <source media="(max-width: 1023px)" srcset="images/Combined_shape_1067.svg">
+                <source media="(min-width: 1024px)" srcset="images/Ellipse_merged_opt.svg">
+                <img src="images/Combined_shape_1067.svg" alt="icon" class="section__list__icon">
+              </picture>
               <p class="section__list__text">
                 Bogata baza klientów - Stamper posiada bazę wszystkich klientów w okolicy jak i klientów konkurencji
               </p>
             </li>
             <li class="section__list__item">
-              <img src="images/Ellipse_merged_opt.svg" alt="icon" class="section__list__icon">
+              <!-- <img src="images/Ellipse_merged_opt.svg" alt="icon" class="section__list__icon"> -->
+              <picture class="section__list__icon">
+                <source media="(max-width: 1023px)" srcset="images/Combined_shape_1067.svg">
+                <source media="(min-width: 1024px)" srcset="images/Ellipse_merged_opt.svg">
+                <img src="images/Combined_shape_1067.svg" alt="icon" class="section__list__icon">
+              </picture>
               <p class="section__list__text">
                 Oszczędność pieniędzy - brak konieczności budowania osobnej aplikacji
               </p>
@@ -174,6 +214,10 @@
         </ul>
       </div>
     </section>
+    <div class="teaser">
+      <h5 class="teaser__subtitle">Nie czekaj!</h5>
+      <h3 class="teaser__title"><b>Zamów</b><br>pakiet!</h3>
+    </div>
     <div class="container">
       <section class="section section-order">
         <h3 class="h3 section__title header--light">Zamów pakiet</h3>
@@ -207,6 +251,7 @@
     <div class="container">
       <section class="section section-clients">
         <h3 class="h3 section__title header--light">Nasi klienci</h3>
+        <h3 class="section__title section__title--mobile"><b>Nasi</b><br/>klienci</h3>
         <div class="customers-list">
           <div class="logos swiper-container">
             <div class="logos-slider swiper-wrapper">
@@ -236,6 +281,55 @@
         </div>
       </section>
     </div>
+    <section class="section section-explore">
+      <div class="section-explore__content">
+        <h3 class="h3 section__title">Poznaj<br/><b>Stamper</b></h3>
+        <p class="section__desc">
+          Stamper podnosi efektywność Twojej marki w mediach digitalowych na 3 sposoby:
+        </p>
+        <ul class="section-explore__list">
+          <li class="section-explore__item">
+            <img
+              srcset="./images/mockup_powiadomiania_w_tel-mobile.png,
+              ./images/mockup_powiadomiania_w_tel-mobile@2x.png 2x,
+              ./images/mockup_powiadomiania_w_tel-mobile@3x.png 3x"
+              src="./images/mockup_powiadomiania_w_tel-mobile.png"
+              alt="remarketing"
+              class="section-explore__image">
+            <h6 class="section-explore__title">Remarketing</h6>
+            <p class="section-explore__text">
+              Targetujemy odbiorcę ponownie i kierujemy komunikaty mające na celu ciągły dialog i utrzymanie więzi z użytkownikiem. Przypominamy o Twoim miejscu, brakujących pieczątkach do otrzymania nagrody czy zachęcamy do ponownego odwiedzenia.
+            </p>
+          </li>
+          <li class="section-explore__item">
+            <img
+              srcset="./images/mockup_powiadomiania_w_tel2.png,
+              ./images/mockup_powiadomiania_w_tel2@2x.png 2x,
+              ./images/mockup_powiadomiania_w_tel2@3x.png 3x"
+              src="./images/mockup_powiadomiania_w_tel2.png"
+              alt="bliskość"
+              class="section-explore__image">
+            <h6 class="section-explore__title">Bliskość</h6>
+            <p class="section-explore__text">
+              Stamper aktywnie używa geofencingu w celu zwiększenia liczby klientów odwiedzających i powracających do danego miejsca. Powiadamia użytkowników o bliskości Twojej marki i możliwych korzyści z programu lojalnościowego, gdy użytkownik znajdzie się w obrębie założonej przez nas lokalizacji.
+            </p>
+          </li>
+          <li class="section-explore__item">
+            <img
+              srcset="./images/www.png,
+              ./images/www@2x.png 2x,
+              ./images/www@3x.png 3x"
+              src="./images/www.png"
+              alt="bliskość"
+              class="section-explore__image section-explore__image--left">
+            <h6 class="section-explore__title">Segmentacja</h6>
+            <p class="section-explore__text">
+              Monitorujemy zwyczaje zakupowe klientów, wiemy co najczęściej kupują, w jakich godzinach i w jakiej lokalizacji. Pozwala to na dostosowanie powiadomień o promocjach - wysyłamy powiadomienia o nowych dostępnych usługach czy restauracjach z podobnego segmentu, które odpowiadają profilowi użytkownika.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="section section-faq">
       <div class="section-faq__content">
         <h3 class="h3 section__title header--light">FAQ</h3>
@@ -249,7 +343,7 @@
         </dl>
       </div>
       <div class="container section-join">
-        <p class="text--primary">Pobierz aplikację z Google Play lub Apple Store</p>
+        <p class="text--primary">Pobierz aplikację<br/>z Google Play lub Apple Store</p>
         <h2 class="h2 section__title"><b>Dołącz do</b><br/>bardziej Lojalnych.</h2>
         <img src="./images/dolacz.png" alt="dołącz" srcset="./images/dolacz.png 1x, ./images/dolacz@2x.png 2x" class="section-join__image" />
         <div class="section__nav">
@@ -268,5 +362,45 @@
       </div>
     </section>
   </main>
+  <footer class="mobile__nav">
+    <nav class="privacy__nav">
+      <ol class="privacy__links">
+        <li class="privacy__nav__item">
+          <a href="/privacy-policy" target="_blank" class="privacy__nav__link">
+            POLITYKA PRYWATNOŚCI
+          </a>
+        </li>
+        <li class="privacy__nav__item">
+          <a href="/terms-and-conditions" target="_blank" class="privacy__nav__link">
+            REGULAMIN APLIKACJI
+          </a>
+        </li>
+        <li class="privacy__nav__item">
+          <a href="/gdpr" target="_blank" class="privacy__nav__link">
+            RODO
+          </a>
+        </li>
+      </ol>
+    </nav>
+    <nav class="social-media">
+      <ul class="media-list">
+        <li class="media-list__item">
+          <a href="https://twitter.com/getstamper" class="media-list__link">
+            <img src="./images/twitter.svg" alt="icon-twitter" class="icon">
+          </a>
+        </li>
+        <li class="media-list__item">
+          <a href="https://www.facebook.com/getstamper" class="media-list__link">
+            <img src="./images/facebook.svg" alt="icon-facebook" class="icon">
+          </a>
+        </li>
+        <li class="media-list__item">
+          <a href="https://www.instagram.com/getstamper" class="media-list__link">
+            <img src="./images/instagram.svg" alt="icon-instagram" class="icon">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 </html>

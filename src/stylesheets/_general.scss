@@ -16,10 +16,18 @@ html {
 
 body {
   padding: 0;
-  background-color: $color_white;
+  background: linear-gradient($color_primary 0%, $color_navy 100%);
   color: $color-white;
   font-family: $font-primary;
   font-weight: 300;
+
+  @media (min-width: $breakpoint_medium) {
+    background: $color_white;
+  }
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 b,
@@ -28,29 +36,59 @@ strong {
 }
 
 .container {
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: 2.25rem;
+  // margin-right: 2.25rem;
+  max-width: 100%;
+
+  @media (min-width: $breakpoint_medium) {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .bg {
   &--gradient {
-    background-color: $color_secondary;
-    background-image:
-      url(../images/fadein_bg.svg),
-      url(../images/fadein_bg.svg),
-      linear-gradient(180deg, $color_secondary 0%, $color_tertiary 100%);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 140% -500px, -250px 80%, 0 0;
-    background-size: 1500px auto, 1500px auto, auto;
+    // background-color: $color_secondary;
+    // background-image:
+    //   url(../images/fadein_bg.svg),
+    //   url(../images/fadein_bg.svg),
+    //   linear-gradient(180deg, $color_secondary 0%, $color_tertiary 100%);
+    // background-repeat: no-repeat, no-repeat, no-repeat;
+    // background-position: 140% 270px, 10px 140%, 0 0;
+    // background-size: 485px auto, 570px auto, auto;
+    background-image: url(../images/fadein_bg.svg);
+    background-repeat: no-repeat;
+    background-position: 140% 270px;
+    background-size: 485px auto;
+
+    @media (min-width: $breakpoint_medium) {
+      background-color: $color_secondary;
+      background-image:
+        url(../images/fadein_bg.svg),
+        url(../images/fadein_bg.svg),
+        linear-gradient(180deg, $color_secondary 0%, $color_tertiary 100%);
+      background-position: 140% -500px, -250px 80%, 0 0;
+      background-size: 1500px auto, 1500px auto, auto;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+    }
   }
 
   &--image {
-    background-position: 108% -130px;
+    background-image: url(../images/Image-1@3x.png);
+    background-size: 595px auto;
+    // background-position: -20% -140px;
+    background-position: calc(100vw - 480px) -140px;
     background-repeat: no-repeat;
-    background-image: url(../images/Image.png);
-    background-image: -webkit-image-set(url(../images/Image.png) 1x, url(../images/Image@2x.png) 2x);
-    background-image: image-set(url(../images/Image.png) 1x, url(../images/Image@2x.png) 2x);
+
+    @media (min-width: $breakpoint_medium) {
+      background-size: auto;
+      background-position: 108% -130px;
+      background-repeat: no-repeat;
+      background-image: url(../images/Image.png);
+      background-image: -webkit-image-set(url(../images/Image.png) 1x, url(../images/Image@2x.png) 2x);
+      background-image: image-set(url(../images/Image.png) 1x, url(../images/Image@2x.png) 2x);
+    }
   }
 }
 
@@ -67,20 +105,37 @@ strong {
   font-family: $font-primary;
   font-weight: 300;
   display: inline-block;
+  line-height: 1.15;
+
+  @media (min-width: $breakpoint_medium) {
+    line-height: 1.5;
+  }
 }
 
 .h1 {
-  font-size: 5rem;
-  letter-spacing: 2px;
+  font-size: 3.5rem;
+
+  @media (min-width: $breakpoint_medium) {
+    font-size: 5rem;
+    letter-spacing: 2px;
+  }
 }
 
 .h2 {
-  font-size: 4.375rem;
+  font-size: 2.75rem;
+
+  @media (min-width: $breakpoint_medium) {
+    font-size: 4.375rem;
+  }
 }
 
 .h3 {
-  font-size: 3rem;
+  font-size: 2.375rem;
   letter-spacing: 1.2px;
+
+  @media (min-width: $breakpoint_medium) {
+    font-size: 3rem;
+  }
 }
 
 .h4 {
@@ -103,11 +158,15 @@ strong {
       content: '';
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -10px;
       display: block;
       height: 5px;
       width: 15%;
       background: transparent linear-gradient(268deg, #0ce8f9 0%, #0046f5 100%) 0% 0% no-repeat padding-box;
+
+      @media (min-width: $breakpoint_medium) {
+        bottom: 0;
+      }
     }
 
     &.h1 {
@@ -126,12 +185,17 @@ strong {
   }
 
   &--light {
-    padding-bottom: 2.25rem;
-    margin-bottom: 3.125rem;
+    margin-bottom: 1.625rem;
+    padding-bottom: 1.125rem;
     margin-top: 5.25rem;
     display: block;
     text-align: center;
     position: relative;
+
+    @media (min-width: $breakpoint_medium) {
+      margin-bottom: 3.125rem;
+      padding-bottom: 2.25rem;
+    }
 
     &::after {
       content: '';
@@ -148,19 +212,34 @@ strong {
 
 .text {
   &--primary {
+    text-align: center;
     margin-top: 0;
     font-size: 1.25rem;
+
+    @media (min-width: $breakpoint_medium) {
+      text-align: left;
+    }
   }
 
   &--secondary {
+    text-align: center;
     margin-top: 0;
     font-size: 1.25rem;
     color: $color_light_blue;
+
+    @media (min-width: $breakpoint_medium) {
+      text-align: left;
+    }
   }
 }
 
 .footer {
-  margin-top: 11.5rem;
+  display: none;
+
+  @media (min-width: $breakpoint_medium) {
+    display: block;
+    margin-top: 11.5rem;
+  }
 
   &__nav {
     .nav__list {

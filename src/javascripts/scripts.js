@@ -88,14 +88,26 @@ function handleFormSubmit() {
   });
 }
 
-window.addEventListener('load', () => {
-  const time = 'Aug 31, 2019 23:00:00'; // set time for counter
+function handleMenuClick() {
+  const menu = document.querySelector('.navigation__icon');
+  if (menu) {
+    menu.addEventListener('click', (e) => {
+      e.currentTarget.parentNode.classList.toggle('open');
+      document.body.classList.toggle('menu-open');
+    });
+  }
+}
 
+window.addEventListener('load', () => {
+  const time = 'Dec 31, 2019 23:00:00'; // set time for counter
+  const numberOfSliderLogos = document.body.offsetWidth < 1025 ? 2 : 4;
   countdownToTime(time);
 
   handleClickOnFaq();
 
   handleFormSubmit();
+
+  handleMenuClick();
 
   // eslint-disable-next-line
   const customSwiper = new Swiper('.slider', {
@@ -106,7 +118,7 @@ window.addEventListener('load', () => {
   });
   // eslint-disable-next-line
   const logosSwiper = new Swiper('.logos', {
-    slidesPerView: 4,
+    slidesPerView: numberOfSliderLogos,
     loop: true,
     autoplay: {
       delay: 5000,

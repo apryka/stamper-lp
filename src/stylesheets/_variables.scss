@@ -6,12 +6,20 @@ $color_tertiary: #020712;
 $color_white: #fff;
 $color_light_blue: #709be7;
 $color_blue: #0046f5;
+$color_navy: #001432;
 $color_input: #939ea6;
 $color_header_dark: #171c2a;
 $color_cyan: #34dcff;
+$color_light_grey: #d9dde5;
+$color_dark_grey: #6b717c;
 $color_form_text: #9aa5c0;
 $color_marker: #696f7d;
 $color_error: rgba(255, 0, 0, 0.15);
+
+@mixin header-gradient {
+  background: #00e8f9;
+  background: linear-gradient(267deg, rgba(0, 232, 249, 1) 0%, rgba(0, 70, 245, 1) 100%);
+}
 
 /* FONTS */
 
@@ -25,3 +33,7 @@ $breakpoint_medium: 1024px;
 $breakpoint_s_large: 1366px;
 $breakpoint_m_large: 1680px;
 $breakpoint_large: 1920px;
+
+/* LAYOUT */
+
+$padding_mobile: 2.25rem;

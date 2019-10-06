@@ -1,15 +1,24 @@
 .faq {
-  margin: 100px auto auto 680px;
+  margin: auto 2.25rem;
+  max-width: 100%;
   padding: 0;
-  max-width: 920px;
+
+  @media (min-width: $breakpoint_medium) {
+    margin: 100px auto auto 680px;
+    max-width: 920px;
+  }
 
   &__term {
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    @media (min-width: $breakpoint_medium) {
+      font-size: 1.5rem;
+    }
 
     &::before {
       content: '+';
@@ -24,6 +33,7 @@
       border-radius: 50%;
       font-size: 2rem;
       font-weight: 300;
+      flex-shrink: 0;
     }
 
     + .faq__definition {
