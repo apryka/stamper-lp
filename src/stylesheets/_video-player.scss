@@ -11,7 +11,7 @@
   background-image: image-set(url(../images/Video.png) 1x, url(../images/Video@2x.png) 2x);
   background-size: cover;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     width: 820px;
     height: 460px;
   }
@@ -26,7 +26,7 @@
   &__image {
     width: 100px;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       width: auto;
     }
   }

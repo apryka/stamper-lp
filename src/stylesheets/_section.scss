@@ -19,12 +19,12 @@
       right: -$padding_mobile;
       bottom: 0;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         content: none;
       }
     }
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       padding: 0;
       grid-column-gap: 3.5rem;
       grid-auto-flow: column;
@@ -35,7 +35,7 @@
       text-align: center;
       font-weight: 300;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         font-weight: 400;
       }
     }
@@ -49,7 +49,7 @@
     padding-left: $padding_mobile;
     padding-right: $padding_mobile;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -58,7 +58,7 @@
       margin-top: 9rem;
       margin-bottom: 2rem;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         margin-top: 6.25rem;
         margin-bottom: 1.5rem;
       }
@@ -77,7 +77,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       padding-left: 0;
       padding-right: 0;
       flex-direction: row;
@@ -88,7 +88,7 @@
       min-width: 0;
       margin: auto;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         margin-left: 60px;
         margin-right: 170px;
       }
@@ -102,7 +102,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -111,7 +111,7 @@
       margin-top: 1.375rem;
       color: $color_white;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         margin-top: 5.25rem;
         color: $color_header_dark;
       }
@@ -119,14 +119,12 @@
 
     &__wrapper {
       min-height: 0;
-      // margin-left: 2.25rem;
-      // margin-right: 2.25rem;
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         margin: 0;
         min-height: 1400px;
       }
@@ -136,7 +134,7 @@
         margin-bottom: 3.375rem;
         color: $color_white;
 
-        @media (min-width: $breakpoint_medium) {
+        @media (min-width: $breakpoint_s_large) {
           margin-top: 130px;
           margin-bottom: 1.625rem;
         }
@@ -144,13 +142,13 @@
         &::after {
           background-color: $color_blue;
 
-          @media (min-width: $breakpoint_medium) {
+          @media (min-width: $breakpoint_s_large) {
             background-color: $color_tertiary;
           }
         }
       }
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         &::after {
           content: '';
           display: block;
@@ -171,7 +169,7 @@
     padding-left: $padding_mobile;
     padding-right: $padding_mobile;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       margin-top: 3vw;
       padding-left: 0;
       padding-right: 0;
@@ -197,7 +195,7 @@
       margin-top: 2.625rem;
       margin-bottom: 3.25rem;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         margin-bottom: 1.625rem;
         margin-top: 5.25rem;
       }
@@ -212,7 +210,7 @@
       grid-auto-flow: row;
       counter-reset: stamper-start;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         grid-auto-flow: column;
       }
 
@@ -227,7 +225,7 @@
           content: counter(stamper-start) ".";
         }
 
-        @media (min-width: $breakpoint_medium) {
+        @media (min-width: $breakpoint_s_large) {
           padding-bottom: 3rem;
           margin-bottom: 2.5rem;
           position: relative;
@@ -263,7 +261,7 @@
       &__text {
         text-align: center;
 
-        @media (min-width: $breakpoint_medium) {
+        @media (min-width: $breakpoint_s_large) {
           text-align: left;
         }
       }
@@ -271,7 +269,7 @@
       &__item {
         margin-bottom: 3.75rem;
 
-        @media (min-width: $breakpoint_medium) {
+        @media (min-width: $breakpoint_s_large) {
           margin-bottom: 0;
         }
       }
@@ -283,7 +281,7 @@
     flex-direction: column;
     position: relative;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       margin-top: 5.875rem;
       min-height: 670px;
 
@@ -305,7 +303,7 @@
     .header--light {
       display: none;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         display: block;
         margin-top: auto;
         color: $color_header_dark;
@@ -316,11 +314,9 @@
   &-clients {
     margin-top: 2.625rem;
     padding: 2rem $padding_mobile;
-    // padding-top: 2rem;
-    // padding-bottom: 2rem;
     background-color: $color_white;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       margin-top: 3.125rem;
       padding: 0;
       background-color: transparent;
@@ -330,7 +326,7 @@
       display: none;
       color: $color_header_dark;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         display: block;
       }
     }
@@ -344,7 +340,7 @@
         line-height: 1.2;
         text-align: center;
 
-        @media (min-width: $breakpoint_medium) {
+        @media (min-width: $breakpoint_s_large) {
           display: none;
         }
       }
@@ -354,7 +350,7 @@
   &-slider {
     display: none;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       display: block;
       padding-bottom: 80px;
       background: transparent url(../images/slider-bg.svg) center bottom no-repeat;
@@ -369,11 +365,10 @@
     background-image: url(../images/Image-footer.png);
     background-image: -webkit-image-set(url(../images/Image-footer.png) 1x, url(../images/Image-footer@2x.png) 2x, url(../images/Image-footer@3x.png) 3x);
     background-image: image-set(url(../images/Image-footer.png) 1x, url(../images/Image-footer@2x.png) 2x, url(../images/Image-footer@3x.png) 3x);
-    // background-position: -38% 100%;
     background-position: calc(100vw - 295px) 100%;
     background-size: 595px auto;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       background-color: $color_secondary;
       background-image:
         url(../images/Group_26.svg),
@@ -397,7 +392,7 @@
     }
 
     &__content {
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         height: 1050px;
         background-position: -1.5vw 50%;
         background-repeat: no-repeat;
@@ -411,7 +406,7 @@
       font-size: 0.9375rem;
       margin-bottom: 0.75rem;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         font-size: 1.25rem;
       }
     }
@@ -421,12 +416,6 @@
       margin-bottom: 2.5rem;
       line-height: 1.2;
       text-align: center;
-      display: block;
-
-      @media (min-width: $breakpoint_medium) {
-        display: inline-block;
-        // text-align: left;
-      }
     }
   }
 
@@ -435,7 +424,7 @@
     padding-right: $padding_mobile;
     position: relative;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 9.625rem;
@@ -444,10 +433,19 @@
     &__image {
       display: none;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         display: inline-block;
         position: absolute;
         bottom: 112px;
+      }
+    }
+
+    .section__title {
+      display: block;
+
+      @media (min-width: $breakpoint_s_large) {
+        display: inline-block;
+        text-align: left;
       }
     }
   }
@@ -458,7 +456,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       padding-bottom: 0;
       display: block;
     }
@@ -467,7 +465,7 @@
       margin-bottom: 1.0625rem;
       margin-right: 0;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         margin-bottom: 0;
         margin-right: 1rem;
       }
@@ -484,7 +482,7 @@
     padding-right: $padding_mobile;
     text-align: center;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       display: none;
     }
 
@@ -586,7 +584,7 @@
     font-weight: 400;
   }
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     display: none;
   }
 }

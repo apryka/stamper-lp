@@ -3,7 +3,7 @@
   max-width: 100%;
   padding: 0;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     margin: 100px auto auto 680px;
     max-width: 920px;
   }
@@ -16,7 +16,7 @@
     align-items: center;
     cursor: pointer;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       font-size: 1.5rem;
     }
 

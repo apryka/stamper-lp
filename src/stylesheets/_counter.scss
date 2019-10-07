@@ -4,7 +4,7 @@
   align-items: center;
   flex-shrink: 0;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     align-items: flex-start;
   }
 
@@ -12,7 +12,7 @@
     text-align: center;
     font-size: 1.25rem;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       text-align: left;
     }
   }
@@ -33,7 +33,7 @@
     line-height: 1.15;
     border-right: 1px solid $color_white;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       font-size: 2.25rem;
     }
 
@@ -46,7 +46,7 @@
     color: $color_blue;
     font-size: 0.875rem;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       font-size: 1.125rem;
     }
   }

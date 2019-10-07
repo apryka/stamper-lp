@@ -21,7 +21,7 @@ body {
   font-family: $font-primary;
   font-weight: 300;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     background: $color_white;
   }
 
@@ -36,11 +36,9 @@ strong {
 }
 
 .container {
-  // margin-left: 2.25rem;
-  // margin-right: 2.25rem;
   max-width: 100%;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
@@ -49,20 +47,12 @@ strong {
 
 .bg {
   &--gradient {
-    // background-color: $color_secondary;
-    // background-image:
-    //   url(../images/fadein_bg.svg),
-    //   url(../images/fadein_bg.svg),
-    //   linear-gradient(180deg, $color_secondary 0%, $color_tertiary 100%);
-    // background-repeat: no-repeat, no-repeat, no-repeat;
-    // background-position: 140% 270px, 10px 140%, 0 0;
-    // background-size: 485px auto, 570px auto, auto;
     background-image: url(../images/fadein_bg.svg);
     background-repeat: no-repeat;
     background-position: 140% 270px;
     background-size: 485px auto;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       background-color: $color_secondary;
       background-image:
         url(../images/fadein_bg.svg),
@@ -77,11 +67,10 @@ strong {
   &--image {
     background-image: url(../images/Image-1@3x.png);
     background-size: 595px auto;
-    // background-position: -20% -140px;
     background-position: calc(100vw - 480px) -140px;
     background-repeat: no-repeat;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       background-size: auto;
       background-position: 108% -130px;
       background-repeat: no-repeat;
@@ -107,7 +96,7 @@ strong {
   display: inline-block;
   line-height: 1.15;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     line-height: 1.5;
   }
 }
@@ -115,7 +104,7 @@ strong {
 .h1 {
   font-size: 3.5rem;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     font-size: 5rem;
     letter-spacing: 2px;
   }
@@ -124,7 +113,7 @@ strong {
 .h2 {
   font-size: 2.75rem;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     font-size: 4.375rem;
   }
 }
@@ -133,7 +122,7 @@ strong {
   font-size: 2.375rem;
   letter-spacing: 1.2px;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     font-size: 3rem;
   }
 }
@@ -164,7 +153,7 @@ strong {
       width: 15%;
       background: transparent linear-gradient(268deg, #0ce8f9 0%, #0046f5 100%) 0% 0% no-repeat padding-box;
 
-      @media (min-width: $breakpoint_medium) {
+      @media (min-width: $breakpoint_s_large) {
         bottom: 0;
       }
     }
@@ -192,7 +181,7 @@ strong {
     text-align: center;
     position: relative;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       margin-bottom: 3.125rem;
       padding-bottom: 2.25rem;
     }
@@ -216,7 +205,7 @@ strong {
     margin-top: 0;
     font-size: 1.25rem;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       text-align: left;
     }
   }
@@ -227,7 +216,7 @@ strong {
     font-size: 1.25rem;
     color: $color_light_blue;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       text-align: left;
     }
   }
@@ -236,7 +225,7 @@ strong {
 .footer {
   display: none;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     display: block;
     margin-top: 11.5rem;
   }

@@ -2,7 +2,7 @@
   padding-top: 2.625rem;
   display: none;
 
-  @media (min-width: $breakpoint_medium) {
+  @media (min-width: $breakpoint_s_large) {
     display: block;
   }
 
@@ -11,7 +11,7 @@
     padding-right: $padding_mobile;
     display: block;
 
-    @media (min-width: $breakpoint_medium) {
+    @media (min-width: $breakpoint_s_large) {
       display: none;
     }
 

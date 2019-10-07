@@ -90,12 +90,21 @@ function handleFormSubmit() {
 
 function handleMenuClick() {
   const menu = document.querySelector('.navigation__icon');
+  const menuBtn = document.querySelector('.navigation__menu');
   if (menu) {
-    menu.addEventListener('click', (e) => {
-      e.currentTarget.parentNode.classList.toggle('open');
+    menu.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
       document.body.classList.toggle('menu-open');
     });
   }
+
+  const menuLinks = document.querySelectorAll('.navigation--mobile .navigation__container a');
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      document.body.classList.toggle('menu-open');
+    });
+  });
 }
 
 window.addEventListener('load', () => {
