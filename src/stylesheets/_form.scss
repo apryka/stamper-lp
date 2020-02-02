@@ -92,9 +92,15 @@
   &__text {
     margin-bottom: 1.25rem;
     display: block;
+  }
 
-    .marker {
-      color: $color_marker;
+  .marker {
+    color: $color_marker;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -128,12 +134,16 @@
         }
       }
     }
+
+    & + .form__checkbox {
+      margin-top: 1.0625rem;
+    }
   }
 
   &.dirty {
     .form__input {
       &:invalid {
-        background-color: $color_error;
+        background-color: transparentize($color_error, 0.85);
       }
     }
 
@@ -141,7 +151,7 @@
       &:invalid {
         & + .label {
           &::before {
-            background-color: $color-error;
+            background-color: transparentize($color_error, 0.85);
           }
         }
       }

@@ -1,0 +1,201 @@
+.webinar {
+  .bg {
+    &--image {
+      background-size: 595px auto;
+      background-repeat: no-repeat;
+      background-image: url(../images/Image1_trim.png);
+      background-image: -webkit-image-set(url(../images/Image1_trim.png) 1x, url(../images/Image1_trim@2x.png) 2x);
+      background-image: image-set(url(../images/Image1_trim.png) 1x, url(../images/Image1_trim@2x.png) 2x);
+
+      @media (min-width: $breakpoint_s_large) {
+        background-size: auto;
+        background-position: 108% -130px;
+      }
+    }
+  }
+
+  .navigation {
+    display: block;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+
+    @media (min-width: $breakpoint_s_large) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .section-main {
+    .section__title {
+      padding-bottom: 1rem;
+      line-height: 1.15;
+    }
+
+    .text--secondary {
+      text-align: left;
+    }
+  }
+
+  .section-counter {
+    margin-top: 80px;
+    margin-bottom: 300px;
+
+    .container {
+      width: 100%;
+    }
+
+    .counter {
+      align-items: flex-start;
+    }
+
+    .couter__text {
+      text-align: left;
+    }
+
+    .counter__element {
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .form {
+    padding-bottom: 8.5rem;
+
+    &__wrapper {
+      margin-bottom: 2.875rem;
+      background: none;
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (min-width: $breakpoint_s_large) {
+        max-width: 840px;
+      }
+
+      [type="email"] {
+        grid-column: 2 / span 2;
+
+        @media (min-width: $breakpoint_s_large) {
+          max-width: 550px;
+        }
+      }
+    }
+
+    &__input {
+      padding: 1rem 1.375rem;
+      font-size: 1.25rem;
+      text-align: left;
+    }
+
+    &__btn {
+      margin: 5.375rem auto 0 auto;
+    }
+
+    &.dirty {
+      .form__input {
+        &:invalid {
+          background-color: $color_white;
+          border: 1px solid $color_error;
+        }
+      }
+
+      .checkbox {
+        &:invalid {
+          & + label::before {
+            background-color: $color_white;
+            border: 1px solid transparentize(red, 0.15);
+          }
+        }
+      }
+    }
+  }
+
+  .section-register {
+    margin-top: 11vh;
+    position: relative;
+    background-color: $color_navy;
+    z-index: 10;
+
+    .container {
+      position: relative;
+    }
+
+    .section__title {
+      margin: 0 3.25rem 4.6875rem 6.25rem;
+      font-weight: 700;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 150vw;
+      height: 11vw;
+      transform: rotate(-5deg) translateX(-10%);
+      background-color: $color_navy;
+      position: absolute;
+      top: -8vw;
+      left: 0;
+    }
+
+    &::after {
+      content: none;
+
+      @media (min-width: $breakpoint_s_large) {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(-892px + 11vw);
+        right: 0;
+        width: 472px;
+        height: 892px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../images/funkcje.png);
+        background-image: -webkit-image-set(url(../images/funkcje.png) 1x, url(../images/funkcje@2x.png) 2x);
+        background-image: image-set(url(../images/funkcje.png) 1x, url(../images/funkcje@2x.png) 2x);
+      }
+    }
+  }
+
+  .modal {
+    &__box {
+      min-width: 80vw;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-image: url(../images/MaskGroup1.png);
+      background-image: -webkit-image-set(url(../images/MaskGroup1.png) 1x, url(../images/MaskGroup1@2x.png) 2x);
+      background-image: image-set(url(../images/MaskGroup1.png) 1x, url(../images/MaskGroup1@2x.png) 2x);
+      background-size: 80vw auto;
+
+      @media (min-width: $breakpoint_s_large) {
+        min-width: 740px;
+        background-size: 740px auto;
+        background-position: 30px 0;
+      }
+    }
+
+    &__image {
+      display: block;
+      max-width: 71%;
+      margin: -1rem auto 2rem -5rem;
+
+      @media (min-width: $breakpoint_s_large) {
+        width: 525px;
+        height: auto;
+      }
+    }
+
+    &__header {
+      font-size: 2rem;
+    }
+
+    &__text {
+      font-size: 1.25rem;
+    }
+
+    &__close {
+      width: 33px;
+      height: 33px;
+    }
+  }
+}

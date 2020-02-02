@@ -1,5 +1,8 @@
 import Swiper from 'swiper';
 
+const DATE_PROMOTION = 'Dec 31, 2020 23:00:00'; // set date for timer;
+const DATE_WEBINAR = 'Feb 20, 2020, 23:00:00'; // set date for timer;
+
 function countdownToTime(time) {
   const elCounter = document.querySelector('.counter');
   const elDay = document.querySelector('.counter__day');
@@ -40,6 +43,7 @@ function countdownToTime(time) {
 
 function handleClickOnFaq() {
   const faq = document.querySelector('.faq');
+  if (!faq) return;
   faq.addEventListener('click', (e) => {
     if (e.target.classList.contains('faq__term')) {
       e.target.classList.toggle('open');
@@ -47,17 +51,35 @@ function handleClickOnFaq() {
   });
 }
 
-function renderModal(status) {
-  const modalContent = `
-  <div class="modal__box">
-    <h1 class="modal__header">Dziękujemy za zamówienie!</h1>
-    <p class="modal__text">Formularz został wysłany poprawnie!</p>
-    <div class="modal__close"></div>
-  </div>
-  `;
+function renderModalContent(ref) {
+  return ref === 'webinar'
+    ? `<div class="modal__box">
+          <img
+            srcset="./images/www1.png,
+            ./images/www1@2x.png 2x""
+            src="./images/www1.png"
+            alt="modal image"
+            class="modal__image">
+          <h1 class="modal__header">Dziękujemy za zapisanie się <br/>na webinar!</h1>
+          <p class="modal__text">Na maila {xyz} wysyłamy właśnie <br/>potwierdzenie zapisania się.</p>
+          <div class="modal__close"></div>
+        </div>
+      ` : `
+      <div class="modal__box">
+        <h1 class="modal__header">Dziękujemy za zamówienie!</h1>
+        <p class="modal__text">Formularz został wysłany poprawnie!</p>
+        <div class="modal__close"></div>
+      </div>
+      `;
+}
+
+function renderModal(status, ref) {
   const modal = document.createElement('div');
   modal.classList.add('modal__cover');
-  modal.innerHTML = modalContent;
+  if (ref === 'webinar') {
+    modal.classList.add('webinar');
+  }
+  modal.innerHTML = renderModalContent(ref);
 
   if (status) {
     document.body.append(modal);
@@ -67,7 +89,9 @@ function renderModal(status) {
 }
 
 function handleFormSubmit() {
+  let isModalOpen = false;
   const form = document.querySelector('.form');
+  if (!form) return;
   const submitBtn = form.querySelector('[type="submit"]');
 
   submitBtn.addEventListener('click', () => {
@@ -75,8 +99,13 @@ function handleFormSubmit() {
   });
 
   form.addEventListener('submit', (e) => {
-    renderModal(true);
-    document.querySelector('.modal__close').addEventListener('click', () => renderModal(false));
+    if (!isModalOpen) {
+      const reference = form.dataset && form.dataset.reference;
+      renderModal(true, reference);
+      document.querySelector('.modal__close').addEventListener('click', () => renderModal(false));
+    }
+
+    isModalOpen = true;
 
     if (!window.localStorage) return;
     if (window.localStorage.getItem('form_submitted') === 'true') {
@@ -99,16 +128,22 @@ function handleMenuClick() {
   }
 
   const menuLinks = document.querySelectorAll('.navigation--mobile .navigation__container a');
-  menuLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      menuBtn.classList.toggle('open');
-      document.body.classList.toggle('menu-open');
+  if (menuLinks) {
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+      });
     });
-  });
+  }
 }
 
 window.addEventListener('load', () => {
-  const time = 'Dec 31, 2019 23:00:00'; // set time for counter
+  const mainElement = document.querySelector('main');
+  let time = DATE_PROMOTION;
+  if (mainElement.classList.contains('webinar')) {
+    time = DATE_WEBINAR;
+  }
   const numberOfSliderLogos = document.body.offsetWidth < 1025 ? 2 : 4;
   countdownToTime(time);
 
