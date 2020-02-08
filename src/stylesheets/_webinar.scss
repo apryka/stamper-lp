@@ -3,14 +3,22 @@
     &--image {
       background-size: 595px auto;
       background-repeat: no-repeat;
-      background-image: url(../images/Image1_trim.png);
-      background-image: -webkit-image-set(url(../images/Image1_trim.png) 1x, url(../images/Image1_trim@2x.png) 2x);
-      background-image: image-set(url(../images/Image1_trim.png) 1x, url(../images/Image1_trim@2x.png) 2x);
+      background-image: url(../images/Image1-copy.png);
+      background-image: -webkit-image-set(url(../images/Image1-copy.png) 1x, url(../images/Image1-copy@2x.png) 2x);
+      background-image: image-set(url(../images/Image1-copy.png) 1x, url(../images/Image1-copy@2x.png) 2x);
 
       @media (min-width: $breakpoint_s_large) {
         background-size: auto;
         background-position: 108% -130px;
       }
+    }
+  }
+
+  .logo__icon {
+    width: 146px;
+
+    @media (min-width: $breakpoint_s_large) {
+      width: auto;
     }
   }
 
@@ -66,17 +74,17 @@
       margin-bottom: 2.875rem;
       background: none;
       grid-gap: 30px;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
 
       @media (min-width: $breakpoint_s_large) {
         max-width: 840px;
+        grid-template-columns: repeat(3, 1fr);
       }
 
       [type="email"] {
-        grid-column: 2 / span 2;
-
         @media (min-width: $breakpoint_s_large) {
           max-width: 550px;
+          grid-column: 2 / span 2;
         }
       }
     }
