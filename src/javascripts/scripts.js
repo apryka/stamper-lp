@@ -144,7 +144,18 @@ window.addEventListener('load', () => {
   if (mainElement.classList.contains('webinar')) {
     time = DATE_WEBINAR;
   }
-  const numberOfSliderLogos = document.body.offsetWidth < 1025 ? 2 : 4;
+  let numberOfSliderLogos;
+  switch (true) {
+    case document.body.offsetWidth < 581:
+      numberOfSliderLogos = 1;
+      break;
+    case document.body.offsetWidth < 1081:
+      numberOfSliderLogos = 2;
+      break;
+    default:
+      numberOfSliderLogos = 4;
+  }
+
   countdownToTime(time);
 
   handleClickOnFaq();
