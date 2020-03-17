@@ -45,4 +45,26 @@
     background: url(../images/cancel.svg) 50% 50% no-repeat transparent;
     cursor: pointer;
   }
+
+  &-status {
+    .modal__header {
+      margin-bottom: 1rem;
+      font-family: Poppins, Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: 300;
+    }
+
+    .modal__text {
+      color: $color_white;
+    }
+
+    &.modal__box {
+      &.modal-status--success {
+        background-color: $color_success;
+      }
+
+      &.modal-status--error {
+        background-color: $color_error;
+      }
+    }
+  }
 }
