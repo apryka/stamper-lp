@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700|Poppins:300,500,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
-<body>
+<body data-reference="lp">
   <main class="main">
     <div class="bg--gradient">
       <div class="bg--image">
@@ -224,6 +224,7 @@
         <h3 class="h3 section__title header--light">Zamów pakiet</h3>
         <form action="" class="form">
           <div class="form__wrapper">
+            <input type="hidden" id="Discount" name="Discount" value="false">
             <input type="text" class="form__input" placeholder="Imię" required />
             <input type="text" class="form__input" placeholder="Nazwisko" required />
             <input type="text" class="form__input" placeholder="Nazwa firmy" required />

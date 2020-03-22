@@ -1,7 +1,14 @@
 import Swiper from 'swiper';
 
-const DATE_PROMOTION = 'Dec 31, 2020 23:00:00'; // set date for timer;
-const DATE_WEBINAR = 'Feb 20, 2020, 23:00:00'; // set date for timer;
+const TIMER_PERIOD = 12 * 60 * 60 * 1000; // 12h in miliseconds;
+const TIMESTAMP = Date.now(); // timestamp in miliseconds;
+const INPUT_DISCOUNT = document.querySelector('#Discount'); // hidden input;
+const STORAGE_VARIABLE_NAME = 'stamper_timer'; // pattern for storage variable;
+
+function setDiscount(value) {
+  if (!INPUT_DISCOUNT) return;
+  INPUT_DISCOUNT.value = value;
+}
 
 function countdownToTime(time) {
   const elCounter = document.querySelector('.counter');
@@ -12,7 +19,7 @@ function countdownToTime(time) {
 
   let interval;
   const updateTimer = () => {
-    const countTo = new Date(time).getTime();
+    const countTo = new Date(time);
     // eslint-disable-next-line no-restricted-globals
     if (isNaN(countTo)) {
       clearInterval(interval);
@@ -20,11 +27,13 @@ function countdownToTime(time) {
     }
     const now = new Date().getTime();
     const diff = countTo - now;
-
     if (diff < 0) {
       elCounter.innerHTML = '<div class="counter__end">Promocja została zakończona</div>';
       clearInterval(interval);
+      setDiscount('false');
     }
+
+    setDiscount('true');
     const msPerDay = 60 * 60 * 1000 * 24;
     const msPerHour = 60 * 60 * 1000;
     const days = Math.floor(diff / msPerDay);
@@ -138,12 +147,36 @@ function handleMenuClick() {
   }
 }
 
-window.addEventListener('load', () => {
-  const mainElement = document.querySelector('main');
-  let time = DATE_PROMOTION;
-  if (mainElement.classList.contains('webinar')) {
-    time = DATE_WEBINAR;
+function getPageReference() {
+  const { dataset } = document.body;
+
+  if (dataset.reference) {
+    return dataset.reference;
   }
+
+  return '';
+}
+
+function checkStorage() {
+  if (!window.localStorage) {
+    const totalTime = Number(TIMESTAMP + TIMER_PERIOD);
+    countdownToTime(totalTime);
+    return;
+  }
+
+  const storageName = `${STORAGE_VARIABLE_NAME}_${getPageReference()}`;
+
+  if (window.localStorage.getItem(storageName)) {
+    const timer = Number(window.localStorage.getItem(storageName));
+    countdownToTime(timer);
+  } else {
+    const timer = TIMESTAMP + TIMER_PERIOD;
+    window.localStorage.setItem(storageName, timer);
+    countdownToTime(timer);
+  }
+}
+
+window.addEventListener('load', () => {
   let numberOfSliderLogos;
   switch (true) {
     case document.body.offsetWidth < 581:
@@ -156,13 +189,13 @@ window.addEventListener('load', () => {
       numberOfSliderLogos = 4;
   }
 
-  countdownToTime(time);
-
   handleClickOnFaq();
 
   handleFormSubmit();
 
   handleMenuClick();
+
+  checkStorage();
 
   // eslint-disable-next-line
   const customSwiper = new Swiper('.slider', {
