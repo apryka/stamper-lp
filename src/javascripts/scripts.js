@@ -176,6 +176,23 @@ function checkStorage() {
   }
 }
 
+function hideCounter() {
+  const counter = document.querySelector('.counter');
+  if (!counter) return;
+
+  counter.remove();
+}
+
+function getCounterVisibility() {
+  const { dataset } = document.body;
+
+  if (dataset.hidecounter && dataset.hidecounter === 'true') {
+    hideCounter();
+  } else {
+    checkStorage();
+  }
+}
+
 window.addEventListener('load', () => {
   let numberOfSliderLogos;
   switch (true) {
@@ -195,7 +212,8 @@ window.addEventListener('load', () => {
 
   handleMenuClick();
 
-  checkStorage();
+  // checkStorage();
+  getCounterVisibility();
 
   // eslint-disable-next-line
   const customSwiper = new Swiper('.slider', {
