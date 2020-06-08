@@ -193,6 +193,28 @@ function getCounterVisibility() {
   }
 }
 
+function closePopup() {
+  const closeBtn = document.querySelector('.popup__close');
+  const closeLink = document.querySelector('.popup__close__link');
+  const popup = document.querySelector('.popup__cover');
+
+  if (!closeBtn || !popup) return;
+
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    popup.style.display = 'none';
+  });
+
+  if (closeLink) {
+    closeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      popup.style.display = 'none';
+    });
+  }
+}
+
 window.addEventListener('load', () => {
   let numberOfSliderLogos;
   switch (true) {
@@ -211,6 +233,8 @@ window.addEventListener('load', () => {
   handleFormSubmit();
 
   handleMenuClick();
+
+  closePopup();
 
   // checkStorage();
   getCounterVisibility();

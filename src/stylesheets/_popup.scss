@@ -1,9 +1,9 @@
 .popup {
   width: 80%;
   max-width: 1162px;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 3rem;
@@ -13,22 +13,39 @@
   text-align: center;
   position: relative;
 
+  @media (min-width: 940px) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 4rem;
+  }
+
   &__logo {
     position: absolute;
     left: 50%;
-    top: -136px;
+    top: -65px;
     transform: translateX(-50%);
     background-color: $color_white;
     border-radius: 50%;
-    width: 272px;
-    height: 272px;
+    width: 130px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    @media (min-width: 940px) {
+      width: 272px;
+      height: 272px;
+      top: -136px;
+    }
+
     &__icon {
-      width: 240px;
-      height: 240px;
+      width: 120px;
+      height: 120px;
+
+      @media (min-width: 940px) {
+        width: 240px;
+        height: 240px;
+      }
     }
   }
 
@@ -39,8 +56,13 @@
     cursor: pointer;
 
     &__icon {
-      width: 50px;
-      height: 50px;
+      width: 30px;
+      height: 30px;
+
+      @media (min-width: 940px) {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &__link {
@@ -56,11 +78,15 @@
   }
 
   &__title {
-    padding-top: 16rem;
+    padding-top: 6rem;
     margin-top: 0;
     margin-bottom: 2.5rem;
     font-size: 3.25rem;
     font-weight: 500;
+
+    @media (min-width: 940px) {
+      padding-top: 16rem;
+    }
   }
 
   &__subtitle {
@@ -80,25 +106,39 @@
   &__field {
     margin-top: 5.625rem;
     margin-bottom: 1.875rem;
-    background-color: #eee;
-    border: 1px solid #c2c2c2;
-    border-radius: 3.25rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: 1340px) {
+      flex-direction: row;
+      background-color: #eee;
+      border: 1px solid #c2c2c2;
+      border-radius: 3.25rem;
+    }
   }
 
   &__input {
-    margin-left: 3.25rem;
-    margin-right: 3.25rem;
-    background: none;
-    border: none;
+    width: 100%;
+    padding: 2.25rem 3.25rem;
+    background-color: #eee;
+    border: 1px solid #c2c2c2;
+    border-radius: 3.25rem;
     font-weight: 700;
     font-size: 1.5rem;
     color: #909090;
 
     &:focus {
       outline: none;
+    }
+
+    @media (min-width: 1340px) {
+      width: auto;
+      margin-left: 3.25rem;
+      margin-right: 3.25rem;
+      background: none;
+      border: none;
     }
   }
 
